@@ -363,7 +363,7 @@ function setupLeadForm() {
     showScreen('screen-result');
 
     const { course, area } = calculateResult();
-    fetch('https://formspree.io/f/maqkadve', {
+    fetch('https://formspree.io/f/mdaqvkqo', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
