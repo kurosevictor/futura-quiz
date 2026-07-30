@@ -11,7 +11,7 @@ const AREAS = {
   'Administrativa':                    ['Administração', 'Informática'],
   'Industrial e Técnica':              ['Solda', 'Elétrica Industrial', 'Elétrica Geral', 'TPM', 'Mecânica Industrial'],
   'Mecânica':                          ['Mecânica de Motos', 'Mecânica de Carros'],
-  'Idiomas':                           ['Inglês', 'Espanhol'],
+  'Idiomas':                           ['Inglês'],
   'Saúde e Serviços Especializados':   ['Tanatopraxia'],
 };
 
@@ -32,8 +32,6 @@ const COURSE_TEXTS = {
     'Seu perfil combina com Elétrica Geral porque você busca uma formação técnica prática, útil e com aplicação em diferentes tipos de serviço e manutenção.',
   'Inglês':
     'Seu perfil combina com Inglês porque você busca ampliar oportunidades, melhorar currículo e se comunicar melhor. O inglês pode abrir portas em empresas, atendimento, tecnologia e crescimento profissional.',
-  'Espanhol':
-    'Seu perfil combina com Espanhol porque você demonstra interesse em comunicação e novas oportunidades. É uma boa escolha para quem quer ampliar o currículo e se destacar em atendimento, comércio ou empresas.',
   'Tanatopraxia':
     'Seu perfil combina com Tanatopraxia porque você demonstra abertura para uma área séria, especializada e diferente da maioria. É uma formação para quem busca um caminho profissional específico e com responsabilidade.',
   'TPM':
@@ -59,7 +57,7 @@ const QUESTIONS = [
       { text: 'Aprender uma profissão prática',
         scores: { 'Mecânica de Motos': 3, 'Mecânica de Carros': 3, 'Solda': 3, 'Elétrica Geral': 2, 'Mecânica Industrial': 3 } },
       { text: 'Melhorar meu currículo',
-        scores: { 'Informática': 3, 'Administração': 2, 'Inglês': 2, 'Espanhol': 2 } },
+        scores: { 'Informática': 3, 'Administração': 2, 'Inglês': 2 } },
     ],
   },
   {
@@ -74,7 +72,7 @@ const QUESTIONS = [
       { text: 'Indústria, máquinas e processos',
         scores: { 'Solda': 2, 'Elétrica Industrial': 3, 'Elétrica Geral': 2, 'TPM': 3, 'Mecânica Industrial': 3 } },
       { text: 'Comunicação, idiomas e contato com pessoas',
-        scores: { 'Inglês': 3, 'Espanhol': 3 } },
+        scores: { 'Inglês': 3 } },
       { text: 'Uma área diferente, técnica e especializada',
         scores: { 'Tanatopraxia': 4 } },
     ],
@@ -91,7 +89,7 @@ const QUESTIONS = [
       { text: 'Indústria ou chão de fábrica',
         scores: { 'Solda': 2, 'Elétrica Industrial': 3, 'Elétrica Geral': 2, 'TPM': 3, 'Mecânica Industrial': 3 } },
       { text: 'Atendimento, vendas ou contato com pessoas',
-        scores: { 'Inglês': 2, 'Espanhol': 2, 'Administração': 2 } },
+        scores: { 'Inglês': 2, 'Administração': 2 } },
       { text: 'Área especializada com alta responsabilidade',
         scores: { 'Tanatopraxia': 4 } },
     ],
@@ -108,7 +106,7 @@ const QUESTIONS = [
       { text: 'Técnico, industrial e voltado para processos',
         scores: { 'TPM': 3, 'Elétrica Industrial': 3, 'Elétrica Geral': 2, 'Solda': 2, 'Mecânica Industrial': 3 } },
       { text: 'Voltado para comunicação e oportunidades maiores',
-        scores: { 'Inglês': 3, 'Espanhol': 3 } },
+        scores: { 'Inglês': 3 } },
       { text: 'Diferenciado, sério e especializado',
         scores: { 'Tanatopraxia': 4 } },
     ],
@@ -119,7 +117,7 @@ const QUESTIONS = [
       { text: 'Quero começar a trabalhar com mais preparo',
         scores: { 'Administração': 2, 'Informática': 2 } },
       { text: 'Quero melhorar meu currículo',
-        scores: { 'Inglês': 2, 'Espanhol': 2, 'Informática': 2 } },
+        scores: { 'Inglês': 2, 'Informática': 2 } },
       { text: 'Quero aprender uma profissão prática',
         scores: { 'Mecânica de Motos': 3, 'Mecânica de Carros': 3, 'Solda': 3, 'Mecânica Industrial': 3 } },
       { text: 'Quero crescer em uma área técnica',
@@ -141,8 +139,8 @@ const QUESTIONS = [
         scores: { 'Mecânica de Motos': 3, 'Mecânica de Carros': 3 } },
       { text: 'Solda, elétrica ou manutenção industrial',
         scores: { 'Solda': 2, 'Elétrica Industrial': 2, 'Elétrica Geral': 2, 'TPM': 2, 'Mecânica Industrial': 2 } },
-      { text: 'Inglês ou espanhol',
-        scores: { 'Inglês': 3, 'Espanhol': 3 } },
+      { text: 'Inglês',
+        scores: { 'Inglês': 3 } },
       { text: 'Tanatopraxia ou área especializada',
         scores: { 'Tanatopraxia': 5 } },
     ],
@@ -237,7 +235,6 @@ function calculateResult() {
   // DESEMPATE 3 — regras fixas para pares sempre empatados
   const fixedOrder = [
     ['Mecânica de Motos', 'Mecânica de Carros'],
-    ['Inglês', 'Espanhol'],
     ['Elétrica Industrial', 'Elétrica Geral'],
     ['Administração', 'Informática'],
   ];
